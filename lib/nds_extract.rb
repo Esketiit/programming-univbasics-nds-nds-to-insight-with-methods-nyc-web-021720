@@ -19,6 +19,11 @@ end
 # { directorOne => allTheMoneyTheyMade, ... }
 
 def directors_totals(nds)
-  result = {}
-  nil
+  director_totals = {}
+
+directors_database.each do |director_hash|
+	sum = sum_director_totals(director_hash)
+	director_totals[director_hash[:name]] = sum
+end
+
 end
