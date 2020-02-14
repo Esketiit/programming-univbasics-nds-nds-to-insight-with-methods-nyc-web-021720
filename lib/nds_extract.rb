@@ -22,7 +22,7 @@ def directors_totals(nds)
   director_totals = {}
 
 directors_database.each do |director_hash|
-	sum = sum_director_totals(director_hash)
+	sum = gross_for_director(director_hash)
 	director_totals[director_hash[:name]] = sum
 end
 
